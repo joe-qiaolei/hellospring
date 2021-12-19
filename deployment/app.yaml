@@ -21,7 +21,12 @@ spec:
             domain: test.sample.com
             http:
               /: 8080
-
+        - type: rollout
+            properties:
+              targetSize: 5
+              rolloutBatches:
+                - replicas: 2
+                - replicas: 3
   workflow:
     steps:
       - name: apply-server
