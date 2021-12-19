@@ -25,7 +25,7 @@ spec:
         - type: rollout
           properties:
             targetSize: 2
-            batchPartition: 0
+#            batchPartition: 0
             rolloutBatches:
               - replicas: 1
               - replicas: 1
