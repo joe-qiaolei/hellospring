@@ -22,7 +22,7 @@ jobs:
     - name: Build with Maven
       run: mvn --batch-mode --update-snapshots verify -DskipTests   
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag qiaolei81/hellespring:latest
+      run: docker build . --file Dockerfile --tag qiaolei81/hellospring:latest
     - name: Dockerhub login
       run: docker login -u qiaolei81 -p 5fd3ccb4-9f51-4310-9965-d80ec85c36b5
     - name: Push the Docker image
