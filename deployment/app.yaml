@@ -7,7 +7,7 @@ spec:
   components:
     - name: hellospring
       type: webservice
-      externalRevision: v2
+      externalRevision: v3
       properties:
         image: docker.io/qiaolei81/hellospring
         port: 8080
@@ -22,6 +22,13 @@ spec:
             domain: test.sample.com
             http:
               /: 8080
+        - type: rollout
+          properties:
+            targetSize: 2
+            batchPartition: 0
+            rolloutBatches:
+              - replicas: 1
+              - replicas: 1
   workflow:
     steps:
       - name: apply-server
