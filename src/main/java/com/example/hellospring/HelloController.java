@@ -9,7 +9,7 @@ public class HelloController {
 @RequestMapping("/")
 
   public String index() {
-      return "Greetings from Azure Spring Cloud! THIS IS THE GREEN DEPLOYMENT";
+      return "Greetings from Azure Spring Cloud! THIS IS THE V2 DEPLOYMENT";
   }
 
 }
