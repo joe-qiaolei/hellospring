@@ -22,7 +22,7 @@ spec:
             domain: test.hellospring.com
             namespace: default
             http:
-              /hellospring: 8080
+              /: 8080
         - type: rollout
           properties:
             targetSize: 2
