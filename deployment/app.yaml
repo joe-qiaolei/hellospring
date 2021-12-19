@@ -30,12 +30,3 @@ spec:
             rolloutBatches:
               - replicas: 1
               - replicas: 1
-  workflow:
-    steps:
-      - name: apply-server
-        type: apply-component
-        properties:
-          component: hellospring
-        outputs:
-          - name: server-status
-            valueFrom: output.spec.template.spec.containers[0].image + " image applied."
