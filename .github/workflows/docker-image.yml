@@ -26,4 +26,4 @@ jobs:
     - name: Dockerhub login
       run: docker login -u qiaolei81 -p 5fd3ccb4-9f51-4310-9965-d80ec85c36b5
     - name: Push the Docker image
-      run: docker push qiaolei81/hellespring:latest
+      run: docker push qiaolei81/hellospring:latest
