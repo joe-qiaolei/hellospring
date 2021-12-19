@@ -1,0 +1,33 @@
+apiVersion: core.oam.dev/v1beta1
+kind: Application
+metadata:
+  name: hellospring
+  namespace: default
+spec:
+  components:
+    - name: hellospring
+      type: webservice
+      properties:
+        image: docker.io/qiaolei81/hellospring
+        port: 8080
+        env:
+          - name: spring.config.import
+            value: optional:configserver:http://config-server:8888/
+          - name: eureka.client.service-url.defaultZone
+            value: http://eureka-server:8761/eureka
+      traits:
+        - type: ingress
+          properties:
+            domain: test.sample.com
+            http:
+              /: 8080
+
+  workflow:
+    steps:
+      - name: apply-server
+        type: apply-component
+        properties:
+          component: hellospring
+        outputs:
+          - name: server-status
+            valueFrom: output.spec.template.spec.containers[0].image + " image applied."
