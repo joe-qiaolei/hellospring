@@ -20,6 +20,7 @@ spec:
         - type: ingress
           properties:
             domain: test.sample.com
+            provider: nginx
             http:
               /: 8080
         - type: rollout
