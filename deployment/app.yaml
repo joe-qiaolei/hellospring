@@ -19,10 +19,10 @@ spec:
       traits:
         - type: ingress
           properties:
-            domain: test.sample.com
+            domain: test.hellospring.com
             provider: nginx
             http:
-              /test: 8080
+              /hellospring: 8080
         - type: rollout
           properties:
             targetSize: 2
