@@ -23,3 +23,5 @@ jobs:
       run: mvn --batch-mode --update-snapshots verify -DskipTests   
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag qiaolei81/hellespring:latest
+    - name: Push the Docker image
+      run: docker push qiaolei81/hellespring:latest
