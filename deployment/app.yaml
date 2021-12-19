@@ -20,7 +20,7 @@ spec:
         - type: ingress
           properties:
             domain: test.hellospring.com
-            provider: nginx
+            namespace: default
             http:
               /hellospring: 8080
         - type: rollout
