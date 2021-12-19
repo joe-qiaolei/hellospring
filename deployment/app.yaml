@@ -22,10 +22,3 @@ spec:
             domain: test.hellospring.com
             http:
               /: 8080
-        - type: rollout
-          properties:
-            targetSize: 2
-#            batchPartition: 0
-            rolloutBatches:
-              - replicas: 1
-              - replicas: 1
