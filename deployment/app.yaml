@@ -22,7 +22,7 @@ spec:
             domain: test.sample.com
             provider: nginx
             http:
-              /: 8080
+              /test: 8080
         - type: rollout
           properties:
             targetSize: 2
