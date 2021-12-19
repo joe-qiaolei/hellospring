@@ -7,6 +7,7 @@ spec:
   components:
     - name: hellospring
       type: webservice
+      externalRevision: v2
       properties:
         image: docker.io/qiaolei81/hellospring
         port: 8080
