@@ -17,7 +17,7 @@ spec:
           - name: eureka.client.service-url.defaultZone
             value: http://eureka-server:8761/eureka
       traits:
-        - type: ingress
+        - type: ingress-1-20
           properties:
             domain: test.hellospring.com
             http:
