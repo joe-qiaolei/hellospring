@@ -19,6 +19,6 @@ spec:
       traits:
         - type: ingress
           properties:
-            domain: test.hellospring.com
+            domain: kubevela.asc-test.net
             http:
               /: 8080
