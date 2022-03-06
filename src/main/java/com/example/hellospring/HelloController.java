@@ -8,7 +8,7 @@ public class HelloController {
   @RequestMapping("/")
   public String index() {
       String version = System.getenv("VERSION");
-      return "Greetings from Azure Spring Cloud! THIS IS THE " +version+ " DEPLOYMENT";
+      return "Greetings from Azure Spring Cloud team! THIS IS THE " +version+ " DEPLOYMENT";
   }
 
 }
