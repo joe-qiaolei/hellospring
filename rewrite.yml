@@ -1,0 +1,9 @@
+---
+type: specs.openrewrite.org/v1beta/recipe
+name: com.microsoft.spring.migrate.recipe
+recipeList:
+  - org.openrewrite.java.ChangePackage:
+      oldPackageName: com.example.hellospring
+      newPackageName: com.example.helloazure
+  - com.example.recipe.SayHelloV2Recipe:
+      fullyQualifiedClassName: com.example.helloazure.HelloService
